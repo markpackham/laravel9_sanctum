@@ -16,5 +16,11 @@ class AuthController extends Controller
 
     public function register()
     {
+        return response()->json('This is my register method');
+    }
+
+    public function logout()
+    {
+        return response()->json('This is my logout method');
     }
 }
