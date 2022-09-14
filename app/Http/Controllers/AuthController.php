@@ -26,7 +26,10 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return response()->json('This is my register method');
+        return $this->success([
+            'user' => $user,
+            'token' => $user->createToken('Api Token of ' . $user->name)->plainTextToken
+        ]);
     }
 
     public function logout()
