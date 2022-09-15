@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;
 use Illuminate\Http\Request;
+use App\Traits\HttpResponses;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Resources\TasksResource;
 use App\Http\Requests\StoreTaskRequest;
 
 class TaskController extends Controller
 {
+    use HttpResponses;
+
     /**
      * Display a listing of the resource.
      *
@@ -48,9 +51,14 @@ class TaskController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Task $task)
     {
-        //
+
+        if (Auth::user()->id !== $task->user_id) {
+            return $this->error('', 'You are not authorized to make this request', 403);
+        }
+
+        return new TasksResource($task);
     }
 
     /**
