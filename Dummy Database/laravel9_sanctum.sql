@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2022 at 03:42 PM
+-- Generation Time: Sep 15, 2022 at 06:13 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -98,7 +98,7 @@ CREATE TABLE `personal_access_tokens` (
 INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `expires_at`, `created_at`, `updated_at`) VALUES
 (1, 'App\\Models\\User', 1, 'Api Token of Billy', 'd6e3a94150cbd6aee53c5a390cded81f5e7f511e82aee2448e5df00e2d12a6cb', '[\"*\"]', NULL, NULL, '2022-09-14 11:18:29', '2022-09-14 11:18:29'),
 (2, 'App\\Models\\User', 1, 'Api Token of Billy', 'af122c2d70e16a3f589d41a2963ed0e5bfa2ce72fc706c1a62efd7c3306ce949', '[\"*\"]', NULL, NULL, '2022-09-14 13:02:23', '2022-09-14 13:02:23'),
-(3, 'App\\Models\\User', 1, 'Api Token of Billy', 'fc12a9fcc7c4040cf12a01e982f4486a728d54a00f799b04e8391e5b2c5fac6b', '[\"*\"]', '2022-09-15 11:34:02', NULL, '2022-09-15 11:33:27', '2022-09-15 11:34:02');
+(3, 'App\\Models\\User', 1, 'Api Token of Billy', 'fc12a9fcc7c4040cf12a01e982f4486a728d54a00f799b04e8391e5b2c5fac6b', '[\"*\"]', '2022-09-15 15:00:36', NULL, '2022-09-15 11:33:27', '2022-09-15 15:00:36');
 
 -- --------------------------------------------------------
 
@@ -146,7 +146,6 @@ INSERT INTO `tasks` (`id`, `user_id`, `name`, `description`, `priority`, `create
 (23, 3, 'Similique rerum eum alias sequi provident.', 'Aut quia libero rem fugiat ipsam suscipit deserunt. Dolore aut ab consequuntur sit consequuntur. Voluptatum nostrum ratione ullam cum.', 'high', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (24, 16, 'Consequatur repudiandae laudantium recusandae odio debitis.', 'Perferendis voluptatem ipsam quas officia nam et esse. Ex molestiae ad qui at aut temporibus. Sint rerum corrupti at facere expedita ratione in amet.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (25, 3, 'Expedita ipsum ex quis ut distinctio laborum laboriosam id.', 'Laudantium doloribus ea reiciendis ducimus excepturi sunt praesentium. Voluptas et vel ex quae dolorem error iusto. Error dolorum ut voluptatem.', 'high', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
-(26, 1, 'Voluptates ut aut voluptas sed quam.', 'Sunt soluta eius vel debitis consectetur veritatis. Sint recusandae adipisci cumque reprehenderit autem est. Ad a et ipsam est officiis consequatur sit.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (27, 16, 'Commodi officiis minus ea eveniet.', 'Porro iure qui velit necessitatibus earum sit at officia. Ex modi qui eligendi sint facilis. Enim nam ad dolores et maxime nulla ducimus harum.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (28, 23, 'Sint dignissimos in rerum.', 'Sunt suscipit ab est voluptatem. Delectus necessitatibus quia quo. Minus molestiae blanditiis quia consequatur et laborum.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (29, 25, 'Commodi tempora beatae corrupti eius.', 'Et tempora et doloremque enim reiciendis aperiam voluptatem. Quos voluptates possimus et fugiat autem.', 'high', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
@@ -159,7 +158,6 @@ INSERT INTO `tasks` (`id`, `user_id`, `name`, `description`, `priority`, `create
 (36, 14, 'Voluptatum et itaque fuga quis fugit.', 'Consequatur optio aut at facilis consequatur non eveniet. Nulla sint sapiente consequatur optio. Ut architecto aperiam eveniet illo omnis sit id ut. Ut et ut laboriosam dolorem eum iusto laborum.', 'medium', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (37, 17, 'Eos rerum perferendis sit beatae.', 'Et architecto ad doloribus quibusdam itaque. Labore qui est est at. Sint odio impedit optio consequuntur. Reprehenderit sed dolor quos ipsam est vel.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (38, 22, 'Maiores alias velit quam commodi.', 'Explicabo dolorem atque amet illum consequatur debitis. Numquam est nihil sunt quisquam. Rerum quo aut placeat placeat.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
-(39, 1, 'Aut expedita magnam quo excepturi id.', 'Voluptatem architecto possimus quasi dicta fuga. Aliquam blanditiis similique velit omnis et. Explicabo velit error dolor corporis saepe. Illum qui ab soluta quos.', 'medium', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (40, 6, 'Iste cum aut ut voluptas ut aut natus quos.', 'Rerum saepe occaecati ipsam facilis dolores et deserunt. Ad eum iure iure. Quaerat tenetur corporis porro vel et aut id.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (41, 7, 'Beatae fugit est nesciunt repudiandae.', 'Sit modi qui nemo voluptatem quaerat cumque earum. Sunt soluta aut facere eaque quia facere ut. Ut et quas saepe.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (42, 4, 'Iure asperiores nesciunt facilis et qui aut culpa.', 'Voluptatum eum ut dicta ipsum. Fuga repudiandae repellat ut facere eos laborum. Qui eum quae eveniet quae illum ut.', 'high', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
@@ -310,10 +308,10 @@ INSERT INTO `tasks` (`id`, `user_id`, `name`, `description`, `priority`, `create
 (187, 16, 'Rerum consequatur sit dolores omnis.', 'Consequuntur eveniet molestiae sed minus repudiandae. Et quia id fuga quia earum. Nesciunt consequatur et assumenda dolores id.', 'high', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (188, 13, 'Inventore voluptas accusamus aut velit voluptatibus.', 'Quibusdam molestiae aliquam animi sit quidem dolorum dolorem. Voluptas adipisci nulla maiores perferendis. In maiores quae sed. Ea excepturi consectetur dolorem in.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (189, 6, 'Autem provident ad aut.', 'Ut voluptatem quibusdam minus vel nam dolorem. Vel voluptatem est dolor quos ut ut qui cupiditate. Vel possimus autem quo. Sunt perspiciatis aut autem quasi consectetur.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
-(190, 2, 'Occaecati minus rem voluptatum in temporibus quo ex.', 'Est nostrum quibusdam est. Maxime reiciendis at consequuntur sed et optio et. Laboriosam dolor autem sit autem asperiores molestiae odit perspiciatis.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42');
-INSERT INTO `tasks` (`id`, `user_id`, `name`, `description`, `priority`, `created_at`, `updated_at`) VALUES
+(190, 2, 'Occaecati minus rem voluptatum in temporibus quo ex.', 'Est nostrum quibusdam est. Maxime reiciendis at consequuntur sed et optio et. Laboriosam dolor autem sit autem asperiores molestiae odit perspiciatis.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (191, 4, 'Alias commodi omnis consequatur cupiditate aliquam.', 'Possimus aliquam placeat dolore omnis. Qui accusantium repudiandae incidunt qui ex. Eaque ex commodi odio maxime labore quisquam. Quos facilis quis earum in quod cupiditate similique delectus.', 'medium', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
-(192, 19, 'Laborum mollitia et repellendus cumque.', 'Quia rerum animi earum saepe perspiciatis laborum aspernatur. Quo natus autem sed vel ratione temporibus assumenda. Et sed eos quia inventore nam nihil eos. Expedita iure vero hic eos.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
+(192, 19, 'Laborum mollitia et repellendus cumque.', 'Quia rerum animi earum saepe perspiciatis laborum aspernatur. Quo natus autem sed vel ratione temporibus assumenda. Et sed eos quia inventore nam nihil eos. Expedita iure vero hic eos.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42');
+INSERT INTO `tasks` (`id`, `user_id`, `name`, `description`, `priority`, `created_at`, `updated_at`) VALUES
 (193, 25, 'Aut natus laboriosam aut qui quam ut.', 'Nobis in asperiores nisi amet hic. Quia natus quam vel inventore aperiam dolores deserunt. Provident sunt non nemo officia vel. Pariatur dolor velit quis est. Sunt sunt explicabo omnis dignissimos.', 'high', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (194, 3, 'Vero animi itaque provident.', 'Sit adipisci illo ut a. Voluptatibus consectetur ut eius. In ullam tenetur quasi animi et voluptates quaerat. Debitis sed maxime est enim.', 'medium', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (195, 5, 'Velit dolores exercitationem sit aut totam qui.', 'Laboriosam nihil quaerat modi aut quis blanditiis est. Labore accusantium et enim praesentium velit est iste. Pariatur sit assumenda vel numquam aliquam a ut.', 'medium', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
@@ -371,7 +369,8 @@ INSERT INTO `tasks` (`id`, `user_id`, `name`, `description`, `priority`, `create
 (247, 26, 'Hic tempora architecto ut ratione minima minima voluptatem.', 'Sint animi non amet consequatur nam aliquam aut facere. Omnis sed sequi debitis impedit. Et mollitia repellendus amet.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (248, 11, 'Perferendis voluptatem consequatur doloribus sed illo iusto.', 'Omnis fuga culpa ut in nulla. Quis iste necessitatibus quia odio. Ipsum neque enim voluptas praesentium. Saepe sit voluptatem nihil quis. Eaque in cumque magni quibusdam. Et maiores quaerat minima.', 'low', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
 (249, 12, 'Doloremque a omnis laborum.', 'Non tenetur repellat iusto eveniet quia. Cumque dolorem officia consequatur expedita qui velit. Enim est architecto molestias vero ut ipsum. Dolorem harum velit esse qui aut sint rerum.', 'medium', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
-(250, 7, 'Atque vitae eius dolorem id molestias at.', 'Quae ipsa earum ullam ut saepe aut. Ut accusamus pariatur pariatur dolorem consequatur neque deleniti. Alias iste natus non at velit. Ad magnam quia quo dolorem amet perspiciatis.', 'high', '2022-09-15 12:41:42', '2022-09-15 12:41:42');
+(250, 7, 'Atque vitae eius dolorem id molestias at.', 'Quae ipsa earum ullam ut saepe aut. Ut accusamus pariatur pariatur dolorem consequatur neque deleniti. Alias iste natus non at velit. Ad magnam quia quo dolorem amet perspiciatis.', 'high', '2022-09-15 12:41:42', '2022-09-15 12:41:42'),
+(251, 1, 'My Newish Task', 'My Task Description', 'low', '2022-09-15 13:25:35', '2022-09-15 13:25:35');
 
 -- --------------------------------------------------------
 
@@ -493,7 +492,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=251;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=252;
 
 --
 -- AUTO_INCREMENT for table `users`
