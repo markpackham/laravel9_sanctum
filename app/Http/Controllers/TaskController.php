@@ -53,12 +53,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-
-        if (Auth::user()->id !== $task->user_id) {
-            return $this->error('', 'You are not authorized to make this request', 403);
-        }
-
-        return new TasksResource($task);
+        return $this->isNotAuthorized($task) ? $this->isNotAuthorized($task) : new TasksResource($task);
     }
 
     // We are using Patch instead of Put since the user is limited in what they can change
@@ -88,12 +83,13 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
+        return $this->isNotAuthorized($task) ? $this->isNotAuthorized($task) : $task->delete();
+    }
+
+    private function isNotAuthorized($task)
+    {
         if (Auth::user()->id !== $task->user_id) {
             return $this->error('', 'You are not authorized to make this request', 403);
         }
-
-        $task->delete();
-
-        return response(null, 204);
     }
 }
