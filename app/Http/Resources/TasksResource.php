@@ -14,6 +14,15 @@ class TasksResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => (string)$this->id,
+            'attributes' => [
+                'name' => $this->name,
+                'description' => $this->description,
+                'priority' => $this->priority,
+                'created_at' => $this->created_at,
+                'updated_at' => $this->updated_at,
+            ]
+        ];
     }
 }
