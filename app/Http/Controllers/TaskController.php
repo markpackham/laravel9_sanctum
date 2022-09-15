@@ -61,17 +61,7 @@ class TaskController extends Controller
         return new TasksResource($task);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
+    // We are using Patch instead of Put since the user is limited in what they can change
     /**
      * Update the specified resource in storage.
      *
@@ -79,9 +69,15 @@ class TaskController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Task $task)
     {
-        //
+        if (Auth::user()->id !== $task->user_id) {
+            return $this->error('', 'You are not authorized to make this request', 403);
+        }
+
+        $task->update($request->all());
+
+        return new TasksResource($task);
     }
 
     /**
@@ -90,8 +86,14 @@ class TaskController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Task $task)
     {
-        //
+        if (Auth::user()->id !== $task->user_id) {
+            return $this->error('', 'You are not authorized to make this request', 403);
+        }
+
+        $task->delete();
+
+        return response(null, 204);
     }
 }
